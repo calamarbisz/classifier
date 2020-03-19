@@ -13,8 +13,6 @@ function setup() {
   video = createCapture(VIDEO);
   video.hide();
   mobilenet = ml5.imageClassifier('MobileNet',video, modelready)
-  // imageMode(CENTER);
-  // image(video,windowWidth/2,windowHeight/2,300,200);;
 }
 
 
@@ -31,7 +29,6 @@ function GotResult(error, results) {
   fill(0,255,0);
   textSize(30);
   text(label, random(windowWidth), random(windowHeight));
-
 }
 
 
