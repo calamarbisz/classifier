@@ -24,11 +24,11 @@ function GotResult(error, results) {
   }
   console.log(results);
   label = results[0].label;
-  //let label = results
+  
   mobilenet.predict(GotResult);
   background(0);
 
-  fill(random(255),random(255),random(255));
+  fill(0,255,0);
   textSize(30);
   text(label, random(windowWidth), random(windowHeight));
 
@@ -36,12 +36,9 @@ function GotResult(error, results) {
 
 
 function draw(){
-  // background(0);
   imageMode(CENTER);
-  image(video,windowWidth/2,windowHeight/2,300,200);
-  // fill(0,255,0);
-  // textSize(50);
-  // text(label, 10, 40);
+  image(video,windowWidth/2*(-1),windowHeight/2,300,200);
+  
 }
 
 function windowResized() {
