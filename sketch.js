@@ -1,12 +1,20 @@
-let mobilenet
-let video
-let label
+let mobilenet;
+let video;
+let label;
+let sound=[];
 
 function modelready(){
   console.log('modelready');
   mobilenet.predict(video, GotResult);
-
 }
+
+function preload(){
+  soundFormats('wav', 'ogg');
+   for (let i=0; i < 9; i++){
+     sound[i]= loadSound('sound'+ i +'.wav');
+  }
+}
+
 function setup() {
   createCanvas(windowWidth, windowHeight);
   background(0);
@@ -24,9 +32,26 @@ function GotResult(error, results) {
   label = results[0].label;
   mobilenet.predict(GotResult);
 
-  fill(0,255,0);
+  fill(random(255),random(255),random(255));
   textSize(30);
   text(label, random(windowWidth), random(windowHeight));
+   if(label == 'window screen'){
+    sound[0].play();
+  } else if(label == 'mask'){
+    sound[1].play();
+  } else if(label == 'wig'){
+    sound[2].play();
+  }else if(label == 'ski mask'){
+    sound[3].play();
+  }else if(label == 'cloak'){
+    sound[4].play();
+  }else if(label == 'abaya'){
+    sound[5].play();
+  }else if(label == 'vacuum, vacuum cleaner'){
+    sound[6].play();
+  }else if(label == 'spotlight, spot'){
+    sound[7].play();
+ }
 
 }
 
