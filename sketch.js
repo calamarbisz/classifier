@@ -24,8 +24,6 @@ function GotResult(error, results) {
   label = results[0].label;
   
   mobilenet.predict(GotResult);
-  background(0);
-
   fill(0,255,0);
   textSize(30);
   text(label, random(windowWidth), random(windowHeight));
