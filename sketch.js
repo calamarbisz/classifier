@@ -51,6 +51,8 @@ function GotResult(error, results) {
     sound[6].play();
   }else if(label == 'spotlight, spot'){
     sound[7].play();
+ }else if(label == 'mouse, computer mouse'){
+    sound[8].play();
  }
 
 }
