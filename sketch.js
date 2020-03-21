@@ -63,7 +63,7 @@ function GotResult(error, results) {
 function draw(){
   // background(0);
   imageMode(CENTER);
-  image(video,windowWidth/2,windowHeight/2,300,200);
+  image(video,windowWidth/2,windowHeight/2,200,130);
   // fill(0,255,0);
   // textSize(50);
   // text(label, 10, 40);
