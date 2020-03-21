@@ -34,7 +34,7 @@ function GotResult(error, results) {
   label = results[0].label.toUpperCase();
   mobilenet.predict(GotResult);
 
-  fill(random(255),0,random(255));
+  fill(0,255,0);
   textSize(15);
   text(label, random(windowWidth), random(windowHeight));
    if(label == 'window screen'){
