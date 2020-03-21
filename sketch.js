@@ -37,23 +37,23 @@ function GotResult(error, results) {
   fill(0,255,0);
   textSize(15);
   text(label, random(windowWidth), random(windowHeight));
-   if(label == 'window screen'){
+   if(label == 'WINDOW SCREEN'){
     sound[0].play();
-  } else if(label == 'mask'){
+  } else if(label == 'MASK'){
     sound[1].play();
-  } else if(label == 'wig'){
+  } else if(label == 'WIG'){
     sound[2].play();
-  }else if(label == 'ski mask'){
+  }else if(label == 'SKI MASK'){
     sound[3].play();
-  }else if(label == 'cloak'){
+  }else if(label == 'CLOAK'){
     sound[4].play();
-  }else if(label == 'abaya'){
+  }else if(label == 'ABAYA'){
     sound[5].play();
-  }else if(label == 'vacuum, vacuum cleaner'){
+  }else if(label == 'VACUUM, VACUUM CLEANER'){
     sound[6].play();
-  }else if(label == 'spotlight, spot'){
+  }else if(label == 'SPOTLIGHT, SPOT'){
     sound[7].play();
- }else if(label == 'mouse, computer mouse'){
+ }else if(label == 'MOUSE, COMPUTER MOUSE'){
     sound[8].play();
  }
 
