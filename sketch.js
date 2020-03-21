@@ -2,7 +2,7 @@ let mobilenet;
 let video;
 let label;
 let sound=[];
-let img;
+//let img;
 
 function modelready(){
   console.log('modelready');
@@ -14,12 +14,12 @@ function preload(){
    for (let i=0; i < 9; i++){
      sound[i]= loadSound('sound'+ i +'.wav');
   }
-  img = loadImage('estrellas.jpg');
+  //img = loadImage('estrellas.jpg');
 }
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
-  background(img, windowWidth, windowHeight);
+  background(0);
   video = createCapture(VIDEO);
   video.hide();
   mobilenet = ml5.imageClassifier('MobileNet',video, modelready)
