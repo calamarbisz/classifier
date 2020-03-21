@@ -31,11 +31,11 @@ function GotResult(error, results) {
     console.error(error);
   }
   console.log(results);
-  label = results[0].label;
+  label = results[0].label.toUpperCase();
   mobilenet.predict(GotResult);
 
-  fill(random(255),random(255),random(255));
-  textSize(30);
+  fill(random(255),0,random(255));
+  textSize(15);
   text(label, random(windowWidth), random(windowHeight));
    if(label == 'window screen'){
     sound[0].play();
